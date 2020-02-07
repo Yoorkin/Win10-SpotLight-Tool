@@ -64,7 +64,13 @@ namespace GetBg
                 }
             }
             int count = 0;
-            foreach (var file in new DirectoryInfo(target + "\\LocalState\\Assets").GetFiles())
+            var source = new DirectoryInfo(target + "\\LocalState\\Assets").GetFiles();
+            if(source.Length==0)
+            {
+                MessageBox.Show("需要将你的锁屏壁纸设置为\"Windows聚焦\"才能使用本程序", "错误", MessageBoxButtons.OK);
+                Application.Exit();
+            }
+            foreach (var file in source)
             {
                 System.IO.File.Copy(file.FullName, basePath + "\\" + file.Name + ".jpg");
             }
