@@ -22,13 +22,19 @@ namespace GetBg
         {
             InitializeComponent();
         }
-        static string basePath = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures) + "\\锁屏壁纸";
-        static string phone = basePath + "\\phone";
-        static string desktop = basePath + "\\desktop";
-        static FileInfo[] imgView = new DirectoryInfo(desktop).GetFiles();
-        static int imgIndex = imgView.Length-1;
+        static string basePath;
+        static string phone;
+        static string desktop;
+        static FileInfo[] imgView;
+        static int imgIndex;
         private void Form1_Load(object sender, EventArgs e)
         {
+            basePath = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures) + "\\锁屏壁纸";
+            phone = basePath + "\\phone";
+            desktop = basePath + "\\desktop";
+            Directory.CreateDirectory(basePath);
+            Directory.CreateDirectory(desktop);
+            Directory.CreateDirectory(phone);
             if (Directory.Exists(basePath + "EN"))
             {
                 Directory.CreateDirectory(basePath + "EN");
@@ -39,6 +45,8 @@ namespace GetBg
             }
             linkLabel1.Links.Add(3, 9);
             getImages();
+            imgView = new DirectoryInfo(desktop).GetFiles();
+            imgIndex = imgView.Length - 1;
             picBox.Image = Image.FromFile(imgView[imgView.Length-1].FullName);
         }
         public static void getImages()
@@ -55,9 +63,6 @@ namespace GetBg
                     break;
                 }
             }
-            Directory.CreateDirectory(basePath);
-            Directory.CreateDirectory(desktop);
-            Directory.CreateDirectory(phone);
             int count = 0;
             foreach (var file in new DirectoryInfo(target + "\\LocalState\\Assets").GetFiles())
             {
