@@ -149,7 +149,7 @@ namespace GetBg
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("explorer.exe", @"https://github.com/yoorkin");
+            System.Diagnostics.Process.Start("explorer.exe", @"https://github.com/Yoorkin/Win10-SpotLight-Tool");
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
