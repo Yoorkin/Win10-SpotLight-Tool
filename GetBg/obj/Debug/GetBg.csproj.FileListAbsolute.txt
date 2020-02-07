@@ -1,0 +1,9 @@
+C:\Users\Yorkin\source\repos\GetBg\GetBg\bin\Debug\GetBg.exe.config
+C:\Users\Yorkin\source\repos\GetBg\GetBg\bin\Debug\GetBg.exe
+C:\Users\Yorkin\source\repos\GetBg\GetBg\bin\Debug\GetBg.pdb
+C:\Users\Yorkin\source\repos\GetBg\GetBg\obj\Debug\GetBg.csprojAssemblyReference.cache
+C:\Users\Yorkin\source\repos\GetBg\GetBg\obj\Debug\GetBg.Form1.resources
+C:\Users\Yorkin\source\repos\GetBg\GetBg\obj\Debug\GetBg.Properties.Resources.resources
+C:\Users\Yorkin\source\repos\GetBg\GetBg\obj\Debug\GetBg.csproj.GenerateResource.cache
+C:\Users\Yorkin\source\repos\GetBg\GetBg\obj\Debug\GetBg.exe
+C:\Users\Yorkin\source\repos\GetBg\GetBg\obj\Debug\GetBg.pdb
